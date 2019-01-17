@@ -5,10 +5,8 @@ SCRIPT_NAME=$INSTALL_DIR/locationchanger
 LAUNCH_AGENTS_DIR=$HOME/Library/LaunchAgents
 PLIST_NAME=$LAUNCH_AGENTS_DIR/LocationChanger.plist
 
-sudo -v
-
-sudo mkdir -p $INSTALL_DIR
-cat << "EOT" | sudo tee $SCRIPT_NAME > /dev/null
+mkdir -p $INSTALL_DIR
+cat << "EOT" | tee $SCRIPT_NAME > /dev/null
 #!/bin/bash
 
 # This script changes network location based on the name of Wi-Fi network.
